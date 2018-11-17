@@ -73,25 +73,30 @@ class App extends React.Component{
         players:[
             {
                 name: "Guil",
-                key : 1
+                key : 1,
+                id : 1
               },
               {
                 name: "Treasure",
-                key : 2
+                key : 2,
+                id : 2
               },
               {
                 name: "Ashley",
-                key : 3
+                key : 3,
+                id : 3
               },
               {
                 name: "James",
-                key : 4
+                key : 4,
+                id : 4
               }
         ]
     };
 
     removePlayer = (id)=>{
         this.setState(prevState=>{
+            console.log(id)
             return {
                 players:prevState.players.filter(p=>p.id !==id)
             }
